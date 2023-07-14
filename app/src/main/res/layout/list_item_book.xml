@@ -6,13 +6,13 @@
     android:id="@+id/parent"
     app:cardCornerRadius="15dp"
     app:cardElevation="10dp"
-    android:layout_margin="5dp"
-    android:background="@color/white">
-
-<!--    TODO: fix the thing where it cutts the bottom off-->
+    android:layout_marginTop="15dp"
+    android:background="@color/white"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
     
     <RelativeLayout
-        android:layout_width="200dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:minHeight="230dp">
 
@@ -50,19 +50,23 @@
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/bookImg"
                 android:layout_marginTop="7dp"
+                android:clickable="true"
+                android:hapticFeedbackEnabled="true"
                 />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/collapsedRelLayout"
+            android:id="@+id/expendedRelLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mainCard"
-            android:visibility="gone">
+            android:layout_marginStart="5dp"
+            android:visibility="visible"
+            >
 
             <TextView
-                android:id="@+id/authorText"
+                android:id="@+id/authorTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Author:"
@@ -73,25 +77,25 @@
                 android:id="@+id/authorName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/authorText"
+                android:layout_toEndOf="@+id/authorTxt"
                 android:fontFamily="casual"
                 android:layout_marginStart="3dp"
                 android:text="Author name" />
 
             <TextView
-                android:id="@+id/shortDescrip"
+                android:id="@+id/shortDescriptTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/authorText"
+                android:layout_below="@+id/authorTxt"
                 android:text="Short Description:"
                 android:textStyle="bold"
                 />
 
             <TextView
-                android:id="@+id/shortDescripTxt"
+                android:id="@+id/shortDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shortDescrip"
+                android:layout_below="@id/shortDescriptTxt"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="2dp"
                 android:fontFamily="casual"
@@ -102,7 +106,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/retract_card_arrow"
-                android:layout_alignParentEnd="true"/>
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="7.5dp"
+                android:layout_toRightOf="@+id/authorName"
+                />
 
 
         </RelativeLayout>

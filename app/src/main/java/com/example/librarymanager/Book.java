@@ -3,6 +3,7 @@ package com.example.librarymanager;
 public class Book {
     private int id, pages;
     private String name, author, imageUrl, shortDescription;
+    private boolean isExpanded;
 
     public Book(int id, int pages, String name, String author, String imageUrl, String shortDescription) {
         this.id = id;
@@ -11,6 +12,27 @@ public class Book {
         this.author = author;
         this.imageUrl = imageUrl;
         this.shortDescription = shortDescription;
+        isExpanded = false;
+    }
+
+    public void expand(){
+        isExpanded = true;
+    }
+    public void retract(){
+        isExpanded = false;
+    }
+
+    public boolean isExpanded() {
+        return isExpanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
+
+    public void toggleExpended(){
+        if (isExpanded()) retract();
+        else expand();
     }
 
     public int getId() {
