@@ -6,36 +6,106 @@
     android:id="@+id/parent"
     app:cardCornerRadius="15dp"
     app:cardElevation="10dp"
-    android:layout_margin="15dp"
-    android:minWidth="150dp"
-    android:background="@color/white"
-    >
+    android:layout_margin="5dp"
+    android:background="@color/white">
 
+<!--    TODO: fix the thing where it cutts the bottom off-->
+    
     <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:minHeight="230dp">
+
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingBottom="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/mainCard">
 
-        >
+            <ImageView
+                android:id="@+id/bookImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200dp"
+                android:minHeight="180dp"
+                android:src="@mipmap/ic_launcher" />
 
-        <ImageView
-            android:id="@+id/imgBook"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:src="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/txtBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookImg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="Book Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtBookName"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/expandCardArrowImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/expand_card_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/bookImg"
+                android:layout_marginTop="7dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/collapsedRelLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imgBook"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="7dp"
-            android:text="Book Name"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_below="@+id/mainCard"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/authorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author:"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/authorText"
+                android:fontFamily="casual"
+                android:layout_marginStart="3dp"
+                android:text="Author name" />
+
+            <TextView
+                android:id="@+id/shortDescrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/authorText"
+                android:text="Short Description:"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/shortDescripTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shortDescrip"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="2dp"
+                android:fontFamily="casual"
+                android:text="short descrption" />
+
+            <ImageView
+                android:id="@+id/retractCardArrowImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/retract_card_arrow"
+                android:layout_alignParentEnd="true"/>
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

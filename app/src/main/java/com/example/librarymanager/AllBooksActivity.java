@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -12,7 +13,6 @@ public class AllBooksActivity extends AppCompatActivity {
 
     private RecyclerView booksRecycleView;
     private BooksRecViewAdapter adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class AllBooksActivity extends AppCompatActivity {
 
         adapter.setBooks(books);
         booksRecycleView.setAdapter(adapter);
-        booksRecycleView.setLayoutManager(new GridLayoutManager(this, 2));
+        booksRecycleView.setLayoutManager(new LinearLayoutManager(this));
         booksRecycleView.setHasFixedSize(true);
     }
 }

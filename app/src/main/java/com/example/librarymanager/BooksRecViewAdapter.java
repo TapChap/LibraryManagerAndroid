@@ -63,7 +63,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
-            imgBook = itemView.findViewById(R.id.imgBook);
+            imgBook = itemView.findViewById(R.id.bookImg);
             txtName = itemView.findViewById(R.id.txtBookName);
         }
     }
