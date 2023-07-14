@@ -12,9 +12,8 @@
     >
     
     <RelativeLayout
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:minHeight="230dp">
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
 
         <RelativeLayout
         android:layout_width="match_parent"
@@ -36,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/bookImg"
-                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="7dp"
                 android:text="Book Name"
                 android:textSize="16sp"
@@ -99,7 +98,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="2dp"
                 android:fontFamily="casual"
-                android:text="short descrption" />
+                android:text="short descrption"/>
 
             <ImageView
                 android:id="@+id/retractCardArrowImg"
@@ -107,8 +106,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/retract_card_arrow"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="7.5dp"
-                android:layout_toRightOf="@+id/authorName"
+                android:layout_marginEnd="10dp"
                 />
 
 

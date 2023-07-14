@@ -17,9 +17,6 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineL"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/default_profile_picture" />
-    <!--        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"-->
-    <!--        app:strokeColor="@color/black"-->
-    <!--        app:strokeWidth="1dp"-->
 
     <TextView
         android:id="@+id/myLibrarytxt"
