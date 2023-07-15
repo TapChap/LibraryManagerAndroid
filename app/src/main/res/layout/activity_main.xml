@@ -26,7 +26,7 @@
         android:fontFamily="@font/lemon"
         android:text="My Library"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#8C8B8B"
+        android:textColor="@color/textColor"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toStartOf="@+id/guidelineR"
         app:layout_constraintStart_toStartOf="@+id/guidelineL"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/seeAllBooksBttn" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/alReadyReadBttn"
+        android:id="@+id/allReadyReadBttn"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="22dp"
@@ -81,7 +81,7 @@
         app:backgroundTint="@color/ButtonBackground"
         app:layout_constraintEnd_toStartOf="@+id/guidelineR"
         app:layout_constraintStart_toStartOf="@+id/guidelineL"
-        app:layout_constraintTop_toBottomOf="@+id/alReadyReadBttn" />
+        app:layout_constraintTop_toBottomOf="@+id/allReadyReadBttn" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/myFavoritesBttn"

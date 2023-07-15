@@ -29,13 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         seeAllBooksBttn = findViewById(R.id.seeAllBooksBttn);
         currentlyReadingBttn = findViewById(R.id.currentlyReadingBttn);
-        alreadyReadBttn = findViewById(R.id.alReadyReadBttn);
+        alreadyReadBttn = findViewById(R.id.allReadyReadBttn);
         myWishlistBttn = findViewById(R.id.myWishlistBttn);
         myFavoritesBttn = findViewById(R.id.myFavoritesBttn);
         aboutBttn = findViewById(R.id.aboutBttn);
 
         aboutBttn.setOnClickListener(this);
         seeAllBooksBttn.setOnClickListener(this);
+        myWishlistBttn.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.aboutBttn) switchToActivity(AboutActivity.class);
         if (id == R.id.seeAllBooksBttn) switchToActivity(AllBooksActivity.class);
+        if (id == R.id.myWishlistBttn) switchToActivity(bookActivity.class);
     }
 
     public void switchToActivity(Class<?> targetClass){

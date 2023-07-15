@@ -10,9 +10,10 @@
     <color name="backround">#051923</color>
     <color name="ButtonBackground">#0582ca</color>
     <color name="accentBackround">#006494</color>
+    <color name="textColor">#8C8B8B</color>
 
 
-<!--    <color name="backround">#C2CDD8</color>-->
+    <!--    <color name="backround">#C2CDD8</color>-->
 <!--    <color name="ButtonBackground">#5A869C</color>-->
 <!--    <color name="accentBackround">#C2CDD8</color>-->
 </resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".bookActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@color/ButtonBackground"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ReadingThisBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="20dp"
+        android:text="Reading this"
+        app:backgroundTint="@color/ButtonBackground"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allReadyReadBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ReadingThisBttn"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/ReadingThisBttn"
+        android:text="Already read"
+        app:backgroundTint="@color/ButtonBackground"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addToFavBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ReadingThisBttn"
+        android:layout_alignStart="@+id/ReadingThisBttn"
+        android:text="Add to favorites"
+        app:backgroundTint="@color/ButtonBackground"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/likeBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addToFavBttn"
+        android:layout_alignEnd="@+id/allReadyReadBttn"
+        android:text="Like this"
+        app:backgroundTint="@color/ButtonBackground"
+        />
+
+    <TextView
+        android:id="@+id/bookNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addToFavBttn"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Book Name:"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bookNameTxt"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/bookNameTxt"
+        android:fontFamily="@font/alata"
+        android:text="the name of the book"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/authorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookNameTxt"
+        android:layout_alignStart="@+id/bookNameTxt"
+        android:layout_marginTop="20dp"
+        android:text="Author:"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/authorTxt"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/authorTxt"
+        android:fontFamily="@font/alata"
+        android:text="the name of the author"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/pagesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authorTxt"
+        android:layout_alignStart="@+id/authorTxt"
+        android:layout_marginTop="20dp"
+        android:text="Pages:"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pagesTxt"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/pagesTxt"
+        android:fontFamily="@font/alata"
+        android:text="500"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pagesTxt"
+        android:layout_alignStart="@+id/pagesTxt"
+        android:layout_marginTop="20dp"
+        android:text="Price:"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/priceTxt"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/priceTxt"
+        android:fontFamily="@font/alata"
+        android:text="99"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/shortDescriptTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceTxt"
+        android:layout_alignStart="@+id/priceTxt"
+        android:layout_marginTop="20dp"
+        android:text="Short description:"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/shortDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="112dp"
+        android:layout_alignBaseline="@+id/shortDescriptTxt"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/shortDescriptTxt"
+        android:fontFamily="@font/alata"
+        android:text="the short description of the book"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shortDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ButtonBackground"
+        android:text="Back"
+        />
+
+
+</RelativeLayout>
