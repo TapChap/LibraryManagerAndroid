@@ -18,15 +18,23 @@
         tools:srcCompat="@tools:sample/avatars"
         />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/ReadingThisBttn"
+    <RelativeLayout
+        android:id="@+id/actionBttns"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_marginStart="40dp"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ReadingThisBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Reading this"
+        android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         />
 
@@ -35,9 +43,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ReadingThisBttn"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:layout_toEndOf="@id/ReadingThisBttn"
         android:text="Already read"
+        android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         />
 
@@ -48,6 +57,7 @@
         android:layout_below="@+id/ReadingThisBttn"
         android:layout_alignStart="@+id/ReadingThisBttn"
         android:text="Add to favorites"
+        android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         />
 
@@ -58,16 +68,19 @@
         android:layout_alignTop="@+id/addToFavBttn"
         android:layout_alignEnd="@+id/allReadyReadBttn"
         android:text="Like this"
+        android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/bookNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addToFavBttn"
+        android:layout_below="@+id/actionBttns"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Book Name:"
         android:textColor="@color/textColor"
         android:textStyle="bold"
@@ -176,15 +189,14 @@
     <TextView
         android:id="@+id/shortDescription"
         android:layout_width="wrap_content"
-        android:layout_height="112dp"
+        android:layout_height="64dp"
         android:layout_alignBaseline="@+id/shortDescriptTxt"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/shortDescriptTxt"
         android:fontFamily="@font/alata"
         android:text="the short description of the book"
         android:textColor="@color/textColor"
-        android:textStyle="italic"
-        />
+        android:textStyle="italic" />
 
 
     <com.google.android.material.button.MaterialButton
