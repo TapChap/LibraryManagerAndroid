@@ -15,7 +15,7 @@
         android:theme="@style/Theme.LibraryManager"
         tools:targetApi="31">
         <activity
-            android:name=".bookActivity"
+            android:name=".BookActivity"
             android:exported="false" />
         <activity
             android:name=".AllBooksActivity"

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         aboutBttn.setOnClickListener(this);
         seeAllBooksBttn.setOnClickListener(this);
-        myWishlistBttn.setOnClickListener(this);
+//        myWishlistBttn.setOnClickListener(this);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.aboutBttn) switchToActivity(AboutActivity.class);
         if (id == R.id.seeAllBooksBttn) switchToActivity(AllBooksActivity.class);
-        if (id == R.id.myWishlistBttn) switchToActivity(bookActivity.class);
+//        if (id == R.id.myWishlistBttn) switchToActivity(BookActivity.class);
     }
 
     public void switchToActivity(Class<?> targetClass){

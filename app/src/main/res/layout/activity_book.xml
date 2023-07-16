@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backround"
-    tools:context=".bookActivity">
+    tools:context=".BookActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="192dp"
-        android:layout_height="192dp"
+        android:id="@+id/bookActivityBookImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="192dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
@@ -22,7 +23,7 @@
         android:id="@+id/actionBttns"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
+        android:layout_below="@id/bookActivityBookImage"
         android:layout_marginStart="40dp"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
@@ -30,7 +31,7 @@
         >
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/ReadingThisBttn"
+        android:id="@+id/readingThisBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reading this"
@@ -42,9 +43,9 @@
         android:id="@+id/allReadyReadBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ReadingThisBttn"
+        android:layout_alignTop="@+id/readingThisBttn"
         android:layout_marginStart="20dp"
-        android:layout_toEndOf="@id/ReadingThisBttn"
+        android:layout_toEndOf="@id/readingThisBttn"
         android:text="Already read"
         android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
@@ -54,8 +55,8 @@
         android:id="@+id/addToFavBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ReadingThisBttn"
-        android:layout_alignStart="@+id/ReadingThisBttn"
+        android:layout_below="@+id/readingThisBttn"
+        android:layout_alignStart="@+id/readingThisBttn"
         android:text="Add to favorites"
         android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
@@ -175,7 +176,7 @@
         />
 
     <TextView
-        android:id="@+id/shortDescriptTxt"
+        android:id="@+id/shortDescriptTxtBookActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/priceTxt"
@@ -187,14 +188,12 @@
         />
 
     <TextView
-        android:id="@+id/shortDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:layout_alignBaseline="@+id/shortDescriptTxt"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/shortDescriptTxt"
+        android:id="@+id/shortDescriptionBookActivity"
+        android:layout_width="355dp"
+        android:layout_height="74dp"
+        android:layout_alignBaseline="@+id/shortDescriptTxtBookActivity"
+        android:layout_alignStart="@+id/shortDescriptTxtBookActivity"
         android:fontFamily="@font/alata"
-        android:text="the short description of the book"
         android:textColor="@color/textColor"
         android:textStyle="italic" />
 
@@ -203,7 +202,7 @@
         android:id="@+id/backBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/shortDescription"
+        android:layout_below="@+id/shortDescriptionBookActivity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/ButtonBackground"

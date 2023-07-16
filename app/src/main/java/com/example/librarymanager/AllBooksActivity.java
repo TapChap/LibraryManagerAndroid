@@ -22,8 +22,8 @@ public class AllBooksActivity extends AppCompatActivity {
         booksRecycleView = findViewById(R.id.booksRecView);
 
         ArrayList<Book> books = new ArrayList<>();
-        books.add(new Book(1, 852, "Harry Potter", "J K Rowling", getString(R.string.harryPotterUrl), getString(R.string.harryPotterShortDescrip)));
-        books.add(new Book(2, 561, "Mr.Feynman", "Richard Feynman", getString(R.string.mrFeynmanUrl), getString(R.string.mrFeynmanShortDescrip)));
+        books.add(new Book(1, 852, "Harry Potter", "J K Rowling", getString(R.string.harryPotterUrl), 125, getString(R.string.harryPotterShortDescrip)));
+        books.add(new Book(2, 561, "Mr.Feynman", "Richard Feynman", getString(R.string.mrFeynmanUrl), 399, getString(R.string.mrFeynmanShortDescrip)));
 
         adapter.setBooks(books);
         booksRecycleView.setAdapter(adapter);

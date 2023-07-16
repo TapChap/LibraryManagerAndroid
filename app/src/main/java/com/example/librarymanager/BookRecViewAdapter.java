@@ -2,6 +2,7 @@ package com.example.librarymanager;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -46,11 +46,9 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
                 .load(books.get(position).getImageUrl())
                 .into(holder.imgBook);
 
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, books.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
-            }
+        holder.parent.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, BookActivity.class);
+            mContext.startActivity(intent);
         });
 
         holder.authorName.setText(books.get(position).getAuthor());
@@ -60,7 +58,7 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.VISIBLE);
             holder.downArrow.setVisibility(View.GONE);
-        }else {
+        } else {
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.GONE);
             holder.downArrow.setVisibility(View.VISIBLE);
@@ -96,7 +94,7 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             upArrow = itemView.findViewById(R.id.retractCardArrowImg);
             expandedRelLayout = itemView.findViewById(R.id.expendedRelLayout);
             authorName = itemView.findViewById(R.id.authorName);
-            shortDescription = itemView.findViewById(R.id.shortDescription);
+            shortDescription = itemView.findViewById(R.id.shortDescriptionBookActivity);
 
             downArrow.setOnClickListener(v -> {
                 Book book = books.get(getAdapterPosition());

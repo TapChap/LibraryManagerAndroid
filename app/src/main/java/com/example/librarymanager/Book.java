@@ -1,17 +1,18 @@
 package com.example.librarymanager;
 
 public class Book {
-    private int id, pages;
+    private int id, pages, price;
     private String name, author, imageUrl, shortDescription;
     private boolean isExpanded;
 
-    public Book(int id, int pages, String name, String author, String imageUrl, String shortDescription) {
+    public Book(int id, int pages, String name, String author, String imageUrl, int price, String shortDescription) {
         this.id = id;
         this.pages = pages;
         this.name = name;
         this.author = author;
         this.imageUrl = imageUrl;
         this.shortDescription = shortDescription;
+        this.price = price;
         isExpanded = false;
     }
 
@@ -33,6 +34,14 @@ public class Book {
     public void toggleExpended(){
         if (isExpanded()) retract();
         else expand();
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getId() {
