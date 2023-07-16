@@ -16,6 +16,8 @@ public class Book {
         isExpanded = false;
     }
 
+    public Book(){}
+
     public void expand(){
         isExpanded = true;
     }

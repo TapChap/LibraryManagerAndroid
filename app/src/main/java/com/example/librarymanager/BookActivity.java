@@ -1,5 +1,6 @@
 package com.example.librarymanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +13,7 @@ import com.google.android.material.button.MaterialButton;
 public class BookActivity extends AppCompatActivity {
 
     private ImageView bookImg;
-    private MaterialButton readingThisBttn, allreadyReadBttn, addToFavBttn, likeBttn, backBttn;
+    private MaterialButton readingThisBttn, allreadyReadBttn, addToWishlistBttn, likeBttn, backBttn;
     private TextView bookName, author, pages, price, shortDescrip;
 
     @Override
@@ -24,7 +25,7 @@ public class BookActivity extends AppCompatActivity {
 
         readingThisBttn = findViewById(R.id.readingThisBttn);
         allreadyReadBttn = findViewById(R.id.allReadyReadBttn);
-        addToFavBttn = findViewById(R.id.addToFavBttn);
+        addToWishlistBttn = findViewById(R.id.addToWishlistBttn);
         likeBttn = findViewById(R.id.likeBttn);
 
         bookName = findViewById(R.id.bookName);
@@ -34,10 +35,12 @@ public class BookActivity extends AppCompatActivity {
         shortDescrip = findViewById(R.id.shortDescriptionBookActivity);
 
         backBttn = findViewById(R.id.backBttn);
+        backBttn.setOnClickListener((view -> {
+            startActivity(new Intent(this, AllBooksActivity.class));
+        }));
 
-        // TODO: set the data from the recycler view book
-        Book book = new Book(2, 561, "Mr.Feynman", "Richard Feynman", getString(R.string.mrFeynmanUrl), 399,  getString(R.string.mrFeynmanShortDescrip));
-        setData(book);
+        int bookId = getIntent().getIntExtra("bookId", -1);
+        setData(Utils.getInstance().getBookById(bookId));
     }
 
     private void setData(Book book) {

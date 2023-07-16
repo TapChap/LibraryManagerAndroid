@@ -52,12 +52,12 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/addToFavBttn"
+        android:id="@+id/addToWishlistBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/readingThisBttn"
         android:layout_alignStart="@+id/readingThisBttn"
-        android:text="Add to favorites"
+        android:text="Add to Wishlist"
         android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         />
@@ -66,7 +66,7 @@
         android:id="@+id/likeBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/addToFavBttn"
+        android:layout_alignTop="@+id/addToWishlistBttn"
         android:layout_alignEnd="@+id/allReadyReadBttn"
         android:text="Like this"
         android:textAllCaps="false"

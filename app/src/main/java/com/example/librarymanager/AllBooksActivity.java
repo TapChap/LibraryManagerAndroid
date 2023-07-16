@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
 public class AllBooksActivity extends AppCompatActivity {
 
     private RecyclerView booksRecycleView;
@@ -21,11 +19,7 @@ public class AllBooksActivity extends AppCompatActivity {
         adapter = new BookRecViewAdapter(this);
         booksRecycleView = findViewById(R.id.booksRecView);
 
-        ArrayList<Book> books = new ArrayList<>();
-        books.add(new Book(1, 852, "Harry Potter", "J K Rowling", getString(R.string.harryPotterUrl), 125, getString(R.string.harryPotterShortDescrip)));
-        books.add(new Book(2, 561, "Mr.Feynman", "Richard Feynman", getString(R.string.mrFeynmanUrl), 399, getString(R.string.mrFeynmanShortDescrip)));
-
-        adapter.setBooks(books);
+        adapter.setBooks(Utils.getInstance().getAllBooks());
         booksRecycleView.setAdapter(adapter);
         booksRecycleView.setLayoutManager(new LinearLayoutManager(this));
         booksRecycleView.setHasFixedSize(true);
