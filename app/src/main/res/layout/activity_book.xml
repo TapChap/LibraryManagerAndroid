@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backround"
-    tools:context=".BookActivity">
+    tools:context=".Activities.BookActivity">
 
     <ImageView
         android:id="@+id/bookActivityBookImage"
@@ -40,7 +40,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/allReadyReadBttn"
+        android:id="@+id/alReadyReadBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/readingThisBttn"
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/addToWishlistBttn"
-        android:layout_alignEnd="@+id/allReadyReadBttn"
+        android:layout_alignEnd="@+id/alReadyReadBttn"
         android:text="Like this"
         android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
@@ -199,6 +199,8 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+
         android:id="@+id/backBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

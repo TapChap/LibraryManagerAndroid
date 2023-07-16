@@ -15,16 +15,28 @@
         android:theme="@style/Theme.LibraryManager"
         tools:targetApi="31">
         <activity
-            android:name=".BookActivity"
+            android:name=".Activities.LikedActivity"
             android:exported="false" />
         <activity
-            android:name=".AllBooksActivity"
+            android:name=".Activities.WishlistActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".Activities.CurrentlyReadingActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.AlreadyReadBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.BookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AllBooksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

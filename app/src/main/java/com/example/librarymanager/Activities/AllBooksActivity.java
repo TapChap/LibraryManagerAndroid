@@ -1,10 +1,14 @@
-package com.example.librarymanager;
+package com.example.librarymanager.Activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.librarymanager.BookRecViewAdapter;
+import com.example.librarymanager.R;
+import com.example.librarymanager.Utils;
 
 public class AllBooksActivity extends AppCompatActivity {
 

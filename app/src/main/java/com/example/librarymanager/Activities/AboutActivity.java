@@ -1,10 +1,11 @@
-package com.example.librarymanager;
+package com.example.librarymanager.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.librarymanager.R;
 import com.google.android.material.button.MaterialButton;
 
 public class AboutActivity extends AppCompatActivity {

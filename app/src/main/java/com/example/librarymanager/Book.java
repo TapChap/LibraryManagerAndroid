@@ -98,11 +98,7 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", pages=" + pages +
                 ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", shortDescription='" + shortDescription + '\'' +
                 '}';
     }
 }

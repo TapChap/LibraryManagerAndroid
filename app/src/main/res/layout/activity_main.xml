@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backround"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profilePic"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/seeAllBooksBttn" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/allReadyReadBttn"
+        android:id="@+id/alReadyReadBttn"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="22dp"
@@ -81,14 +81,14 @@
         app:backgroundTint="@color/ButtonBackground"
         app:layout_constraintEnd_toStartOf="@+id/guidelineR"
         app:layout_constraintStart_toStartOf="@+id/guidelineL"
-        app:layout_constraintTop_toBottomOf="@+id/allReadyReadBttn" />
+        app:layout_constraintTop_toBottomOf="@+id/alReadyReadBttn" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/myFavoritesBttn"
+        android:id="@+id/myLikedBttn"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="22dp"
-        android:text="My Favorites"
+        android:text="My Liked books"
         android:textAllCaps="false"
         app:backgroundTint="@color/ButtonBackground"
         app:layout_constraintEnd_toStartOf="@+id/guidelineR"
@@ -106,7 +106,7 @@
         app:backgroundTint="@color/ButtonBackground"
         app:layout_constraintEnd_toStartOf="@+id/guidelineR"
         app:layout_constraintStart_toStartOf="@+id/guidelineL"
-        app:layout_constraintTop_toBottomOf="@+id/myFavoritesBttn" />
+        app:layout_constraintTop_toBottomOf="@+id/myLikedBttn" />
 
     <TextView
         android:id="@+id/developedByTxt"

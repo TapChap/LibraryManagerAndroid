@@ -1,4 +1,4 @@
-package com.example.librarymanager;
+package com.example.librarymanager.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.librarymanager.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ShapeableImageView profileImage;
     private TextView myLibraryTxt, developedByTxt;
-    private MaterialButton seeAllBooksBttn, currentlyReadingBttn, alreadyReadBttn, myWishlistBttn, myFavoritesBttn, aboutBttn;
+    private MaterialButton seeAllBooksBttn, currentlyReadingBttn, alreadyReadBttn, myWishlistBttn, myLikedBttn, aboutBttn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +30,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         seeAllBooksBttn = findViewById(R.id.seeAllBooksBttn);
         currentlyReadingBttn = findViewById(R.id.currentlyReadingBttn);
-        alreadyReadBttn = findViewById(R.id.allReadyReadBttn);
+        alreadyReadBttn = findViewById(R.id.alReadyReadBttn);
         myWishlistBttn = findViewById(R.id.myWishlistBttn);
-        myFavoritesBttn = findViewById(R.id.myFavoritesBttn);
+        myLikedBttn = findViewById(R.id.myLikedBttn);
         aboutBttn = findViewById(R.id.aboutBttn);
 
-        aboutBttn.setOnClickListener(this);
         seeAllBooksBttn.setOnClickListener(this);
-//        myWishlistBttn.setOnClickListener(this);
+        currentlyReadingBttn.setOnClickListener(this);
+        alreadyReadBttn.setOnClickListener(this);
+        myWishlistBttn.setOnClickListener(this);
+        myLikedBttn.setOnClickListener(this);
+        aboutBttn.setOnClickListener(this);
     }
 
     @Override
@@ -45,7 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.aboutBttn) switchToActivity(AboutActivity.class);
         if (id == R.id.seeAllBooksBttn) switchToActivity(AllBooksActivity.class);
-//        if (id == R.id.myWishlistBttn) switchToActivity(BookActivity.class);
+        if (id == R.id.currentlyReadingBttn) switchToActivity(AlreadyReadBookActivity.class);
+        if (id == R.id.alReadyReadBttn) switchToActivity(AlreadyReadBookActivity.class);
+        if (id == R.id.myWishlistBttn) switchToActivity(AlreadyReadBookActivity.class);
+        if (id == R.id.myLikedBttn) switchToActivity(AlreadyReadBookActivity.class);
     }
 
     public void switchToActivity(Class<?> targetClass){

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.TransitionManager;
 
 import com.bumptech.glide.Glide;
+import com.example.librarymanager.Activities.BookActivity;
 
 import java.util.ArrayList;
 
